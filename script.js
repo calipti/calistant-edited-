@@ -173,15 +173,15 @@ document.addEventListener('DOMContentLoaded', function() {
         case "gota any game":
         case "game?":
         clearInput();
-        openLinkInNewWindow('game.html');
-        addTextToResults("play the game at : https://calipti.github.io/assistant-v3.0.0/game.html.");
+        openLinkInNewWindow('./other/game.html');
+        addTextToResults("now playing zombiearena");
         addTextToResults("sorry the game dose not work on mobile.");
         break;
 
       case "open group chat":
         case "chat":
         clearInput();
-        openLinkInNewWindow('Chat.html');
+        openLinkInNewWindow('./other/Chat.html');
         break;
 
       case "please open voice assistant":
