@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInput();
         addTextToResults("F***.");
         break;
-
+        
       case "shit":
       case "poop":
       case "💩":
@@ -174,8 +174,21 @@ document.addEventListener('DOMContentLoaded', function() {
         case "game?":
         clearInput();
         openLinkInNewWindow('game.html');
+        addTextToResults("play the game at : https://calipti.github.io/assistant-v3.0.0/game.html.");
+        addTextToResults("sorry the game dose not work on mobile.");
         break;
 
+      case "open group chat":
+        case "chat":
+        clearInput();
+        openLinkInNewWindow('Chat.html');
+        break;
+
+      case "please open voice assistant":
+        case "voice assistant":
+        clearInput();
+        openLinkInNewWindow('Voice assistant.html');
+        break;
 
       case "date":
         clearInput();
