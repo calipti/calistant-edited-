@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
       case "please open voice assistant":
         case "voice assistant":
         clearInput();
-        openLinkInNewWindow('Voice assistant.html');
+        openLinkInNewWindow('./other/voice.html');
         break;
 
       case "date":
