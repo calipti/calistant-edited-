@@ -173,20 +173,20 @@ document.addEventListener('DOMContentLoaded', function() {
         case "voice assistant":
         case "voice":
         clearInput();
-        openLinkInNewWindow('./other/voice.html');
+        openLinkInNewWindow('/other/voice.html');
         break;
         
         case "gota any game":
         case "game?":
         clearInput();
-        openLinkInNewWindow('./other/game.html');
+        openLinkInNewWindow('/other/game.html');
         break;
         
       
         case "chat":
         case "pubchat":
         clearInput();
-        openLinkInNewWindow('./other/chat.html');
+        openLinkInNewWindow('/other/chat.html');
         break;
 
 
