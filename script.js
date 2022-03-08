@@ -90,6 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var textReplies = function() {
     switch(textInputValueLowerCase){
       // replies
+      case "rick rolled":
+        clearInput();
+        addTextToResults("get rick rolled at https://youtu.be/34Ig3X59_qA <a target='_blank' href='https://youtu.be/34Ig3X59_qA</a>");
+        break;
 
       case "founder":
         clearInput();
@@ -128,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInput();
         addTextToResults("F***.");
         break;
-        
+
       case "shit":
       case "poop":
       case "💩":
@@ -169,22 +173,9 @@ document.addEventListener('DOMContentLoaded', function() {
         case "gota any game":
         case "game?":
         clearInput();
-        openLinkInNewWindow('./other/game.html');
-        addTextToResults("now playing zombiearena");
-        addTextToResults("sorry the game dose not work on mobile.");
+        openLinkInNewWindow('game.html');
         break;
 
-      case "open group chat":
-        case "chat":
-        clearInput();
-        openLinkInNewWindow('./other/Chat.html');
-        break;
-
-      case "please open voice assistant":
-        case "voice assistant":
-        clearInput();
-        openLinkInNewWindow('./other/voice.html');
-        break;
 
       case "date":
         clearInput();
