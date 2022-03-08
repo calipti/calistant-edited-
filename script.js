@@ -90,10 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var textReplies = function() {
     switch(textInputValueLowerCase){
       // replies
-      case "rick rolled":
-        clearInput();
-        addTextToResults("get rick rolled at https://youtu.be/34Ig3X59_qA <a target='_blank' href='https://youtu.be/34Ig3X59_qA</a>");
-        break;
 
       case "founder":
         clearInput();
