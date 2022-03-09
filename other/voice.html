@@ -1,1 +1,160 @@
+<html>
+     <section>
+   <h1>Speech<br> Recognition</h1>
+   <p>voice assistant</p>
+   <p2>This is a beta</p>
+   <div class="container">
+     <div class="texts">
+     </div>
+   </div>
+ </section>
+  <head>
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: rgb(37, 37, 37);
+  flex-direction: column;
+  padding: 50px 0;
+}
+section h1 {
+  color: rgba(255, 255, 255, 0.322);
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+section p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.322);
+  width: 100%;
+  margin-bottom: 40px;
+}
+section p2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.322);
+  width: 100%;
+  margin-bottom: 40px;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.texts p {
+  color: black;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.texts p2 {
+  color: black;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.texts p.replay {
+  text-align: right;
+}
 
+    </style>
+  </head>
+  <body>
+    <script>
+const texts = document.querySelector(".texts");
+
+window.SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new SpeechRecognition();
+recognition.interimResults = true;
+
+let p = document.createElement("p");
+
+recognition.addEventListener("result", (e) => {
+  texts.appendChild(p);
+  const text = Array.from(e.results)
+    .map((result) => result[0])
+    .map((result) => result.transcript)
+    .join("");
+
+  p.innerText = text;
+  if (e.results[0].isFinal) {
+    if (text.includes("how are you")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "I am fine";
+      texts.appendChild(p);
+    }
+    if (
+      text.includes("what's your name") ||
+      text.includes("what is your name")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "My Name is cali";
+      texts.appendChild(p);
+    }
+    if (
+      text.includes("what's your full name") ||
+      text.includes("what is your full name")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "My Name is calipti";
+      texts.appendChild(p);
+    }
+    if (
+      text.includes("open YouTube"
+      ) ||
+      text.includes("open YouTube please")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening youtube ending process";
+      texts.appendChild(p);
+      console.log("opening youtube");
+      window.open("https://www.youtube.com/", "_blank");
+    }
+    if (
+      text.includes("text assistant"
+      ) ||
+      text.includes("open text assistant")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "openin assistant ending process";
+      texts.appendChild(p);
+      console.log("opening assistant");
+      window.open("https://calipti.github.io/caliptis-google-assistant/", "_blank");
+    }
+    p = document.createElement("p");
+  }
+});
+
+recognition.addEventListener("end", () => {
+  recognition.start();
+});
+
+recognition.start();
+    </script>
+  </body>
+</html>
