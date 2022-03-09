@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         case "gota any game":
         case "game?":
         clearInput();
-        openLinkInNewWindow('https://calipti.github.io/calistant/other/game.html');
+        openLinkInNewWindow('https://calipti.github.io/calistant/other/js/game.html');
         break;
         
       
